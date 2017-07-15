@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/i2c/bme280"
+require 'json'
+
+# dump all values in json format
+puts I2C::Driver::BME280.new(device: 1).all.to_json
